@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+
+img {
+    width: 100%;
+}
+
+header {
+    width: 100%;
+    position: absolute;
+    z-index: 800;
+    
+}
+
+.logo {
+    cursor: pointer;
+}
+
+nav {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+li {
+    margin-left: 15px;
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    padding: 8px 16px;
+    color: #7ac32c;
+    transition: all .7s ease;
+    position: relative;
+}
+
+nav a:hover {
+    border-bottom: 1px solid #7ac32c;
+}
+
+.social-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.social-nav svg {
+    margin-left: 15px;
+    cursor: pointer;
+    color: #7ac32c;
+}
+
+.social-nav svg:hover {
+    opacity: .5;
+}
+
+.menu-hamburguer svg {
+    color: #7ac32c;
+    cursor: pointer;   
+}
+
+.menu-hamburguer {
+    display: none;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-video::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    background: linear-gradient(110deg, #0A0C10 25%, rgba(11, 12, 16, 0.8) 50%, #0A0C10 70%);
+}
+
+.video {
+    height: 100vh;
+}
+
+.container {
+    display: none;
+}
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 36px 16px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+
+.container-item-one {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+}
+
+
+.container-item-one p {
+    color: #7ac32c;
+    font-size: 20px;
+}
+
+.button-item-one {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.button-item-one button {
+    background: transparent;
+    color: #7ac32c;
+    font-size: 24px;
+    padding: 6px 36px;
+    border: 2px solid #7ac32c;
+    border-radius: 10px;
+    transform: translate(0);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.button-item-one button::before {
+    content: '';
+    position: absolute;
+    background: #7ac32c;
+    width: 8px;
+    top: 0;
+    bottom: 0;
+    left: -32px;
+    transform: rotate(-16deg);
+    filter: blur(6px);
+}
+
+.button-item-one button:hover::before {
+    left: calc(100% + 32px);
+    transition: 0.75s;
+}
+
+.plataform-item-one {
+    display: flex;
+    justify-content: center;
+}
+
+.plataform-item-one svg {
+    color: #7ac32c;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.plataform-item-one svg:hover {
+    opacity: .8;
+}
+
+.container-item-two {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    margin: 0 auto;
+    
+}
+
+.warzone {
+    width: 120%;
+    -webkit-transition: .7s ease;
+    transition: .7s ease;
+    -webkit-transform: translate3d(-65px, -20px, 0);
+        transform: translate3d(-65px, -20px, 0);
+}
+
+.warzone2{
+    width: 80%;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 1440px) {
+    .warzone {
+        -webkit-transform: translate3d(-65px, -20px, 0);
+        transform: translate3d(-65px, -20px, 0);
+        width: 120%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 100px;
+        height: auto;
+        }
+    
+    .container-item-one {
+        max-width: 100%;
+        order: 2;
+    }
+
+    .container-item-two{
+        max-width: 100%;
+    }
+
+    .logo{
+        width: 150px;
+        height: auto;
+    }
+
+    ul {
+    display: none;
+    }
+    .menuHa{
+    display: block;
+    width: 100%;
+    margin-top: 210px;
+    position: absolute;
+    text-align: center;
+    }
+
+    .padding {
+        padding-top: 220px;
+    }
+
+    .menu-hamburguer{
+        display: flex;
+    }
+
+    .background-video {
+        display: none;
+    } 
+    
+    .warzone {
+        width: 80%;
+        margin-left: 25px;
+        z-index: -100;
+        -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+    }
+
+ 
