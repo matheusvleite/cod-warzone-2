@@ -4,10 +4,10 @@ Projeto desenvolvido para prática.
 
 # Tecnologias e ferramentas usadas:
 
-##CSS
-##HTML
-##JS
-##TILT.JS
+## CSS
+## HTML
+## JS
+## TILT.JS
 
 # PROJETO:
 
