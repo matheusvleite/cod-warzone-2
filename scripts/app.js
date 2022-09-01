@@ -1,9 +1,9 @@
-var hamburguerMenu = document.getElementById('hamburguerMenu')
+const hamburguerMenu = document.getElementById('hamburguerMenu')
 
 hamburguerMenu.addEventListener('click' , function(){
-   var menuNav = document.querySelector('ul');
+   const menuNav = document.querySelector('ul');
    menuNav.classList.toggle('menuHa');
-   var container = document.getElementById('container')
+   const container = document.getElementById('container')
    container.classList.toggle('padding')
  
 })
